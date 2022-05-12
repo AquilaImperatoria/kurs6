@@ -21,7 +21,9 @@ public class UserController {
 
     @PostMapping(value = "/newuser")
     public ResponseEntity<?> newUser(@RequestBody User user) {
+        System.out.println("got newUser request");
         userService.create(user);
+        System.out.println("newUser done");
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
     @GetMapping(value = "/users")

@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Data
 @Table(name = "messages")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Message {
+public class Message {  
     @Id
     @SequenceGenerator(name = "messages_messageid_seq", sequenceName = "messages_messageid_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "messages_messageid_seq")

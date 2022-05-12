@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/kursach6-0.0.1-jar-with-dependencies.jar
+web: java -cp target/classes/:target/dependency/* rtu.mirea.kursach6.Kursach6Application

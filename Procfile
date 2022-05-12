@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar target/kursach6-0.0.1-jar-with-dependencies.jar

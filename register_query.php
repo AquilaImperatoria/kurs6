@@ -25,5 +25,5 @@ function httpPost($url, $content)
 }
 
 $message = "Ошибка при регистрации, попробуйте зарегистрироваться под другим именем";
-if ($status != 201) {  $_SESSION['alerts'] = $message; header( "Location: http://localhost:81/register.php" );}
-    else header( "Location: http://localhost:81/index.php" );
+if ($status != 201) {  $_SESSION['alerts'] = $message; header( "Location: https://kurs6-client.herokuapp.com/register.php" );}
+    else header( "Location: https://kurs6-client.herokuapp.com/index.php" );

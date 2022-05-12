@@ -19,5 +19,5 @@ function httpPost($url, $data)
     return $response;
 }
 $_SESSION['chatcode'] = httpPost($url, $data);
-header( "Location: http://localhost:81/chat.php" );
+header( "Location: https://kurs6-client.herokuapp.com/chat.php" );
 ?>

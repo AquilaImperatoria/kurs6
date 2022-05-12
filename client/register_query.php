@@ -1,6 +1,6 @@
 <?php
 session_start();
-$url = 'https://fierce-forest-40326.herokuapp.com:8000/newuser';
+$url = 'http://localhost:8080//newuser';
 $name = $_POST['name'];
 $password = $_POST['password'];
 $data = array(

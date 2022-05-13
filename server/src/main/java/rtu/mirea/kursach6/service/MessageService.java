@@ -8,4 +8,5 @@ public interface MessageService {
     void create(Message message);
     List<Message> readAll();
     String createChat(String name);
+
 }

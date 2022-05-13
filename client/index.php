@@ -1,6 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['alerts']))   {echo '<div class="alert">' . $_SESSION['alerts'] . '</div>';$_SESSION['alerts'] = null;}
+session_unset();
 ?>
 <form name='form' method='post' action="user_check.php">
 

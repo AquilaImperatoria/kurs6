@@ -1,13 +1,12 @@
 <?php
 session_start();
-$url = 'kurs6-client.herokuapp.com/users/check';
+$url = 'kurs6-server.herokuapp.com/users/check';
 $name = $_POST['name'];
 $password = $_POST['password'];
-$data = [
+$data = array(
     'name'      => $name,
-    'password' => $password
-];
-$response = httpPost($url, $data);
+    'password' => $password);
+
 function httpPost($url, $data)
 {
     $curl = curl_init($url);
@@ -16,9 +15,10 @@ function httpPost($url, $data)
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($curl);
     curl_close($curl);
-    var_dump($response);
+
     return $response;
 }
+$response = httpPost($url, $data);
 $message = "Ошибка при входе, возможно, вы ввели не тот пароль или еще не зарегистрировались?";
 if (($response == '[]')) {  $_SESSION['alerts'] = $message; header( "Location: /index.php" );}
 else {$name = $_POST['name'];

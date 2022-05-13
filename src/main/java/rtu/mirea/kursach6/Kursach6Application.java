@@ -9,6 +9,8 @@ import java.io.IOException;
 public class Kursach6Application {
 
     public static void main(String[] args) throws IOException {
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        System.out.println(dbUrl);
         SpringApplication.run(Kursach6Application.class, args);
 
     }

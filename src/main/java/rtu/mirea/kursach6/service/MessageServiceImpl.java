@@ -40,9 +40,11 @@ public class MessageServiceImpl implements MessageService{
         return num;
     }
 
+
     @Override
     public List<Message> readAll() {
         return messageRepository.findAll();
     }
+
 
 }

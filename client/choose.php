@@ -1,15 +1,15 @@
-
+<?php echo file_get_contents("html/header.html"); ?>
 <a href="/newchat.php" target="_blank">
-     <input type="submit" value="Создать новый чат"/>
+     <input type="submit" value="Create new chat"/>
    </a>
-<form name='form' method='post' action="chat.php" target="_blank">
+<form name='form' method='post' action="chat.php" target="_blank" style="background-color: darkred; color: wheat;">
 
-    Подключиться к имеющемуся чату:<br> <input type="text" name="chatcode" id="chatcode" ><br/>
+    Connect to exitsting chat:<br> <input type="text" name="chatcode" id="chatcode" ><br/>
 
     <input type="submit" name="submit" value="Submit">
 
 </form>
-<a href="index.php"><input type="submit" value="Выйти из аккаунта"/></a>
+<a href="index.php"><input type="submit" value="Exit"/></a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
@@ -36,14 +36,17 @@ $chats[] = null;
 $res = json_decode(httpGet($url, $content));
 $i = 0;
 if (sizeof($res)!= 0)
-echo "<p>Мои чаты:</p>";
+echo '<p>Your chats:</p> <div>';
 while ($i < sizeof($res)) {
     if (!in_array($res[$i]->chatcode, $chats)) {
         array_push($chats, $res[$i]->chatcode);
         echo "<button id ='".$res[$i]->chatcode."'type='submit'  onclick='clickMe(this.id)'>".$res[$i]->chatcode."</button>";
+        if (sizeof($chats)%3 == 1) echo "<br>";
     }
+
     $i = $i + 1;
 }
-
+echo "</div>"
 ?>
 
+<?php echo file_get_contents("html/footer.html"); ?>

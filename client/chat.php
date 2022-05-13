@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -73,13 +74,23 @@ error_reporting(E_ERROR | E_PARSE);
     </script>
 </head>
 <body onload="star()">
+<header style="text-align: center; background-color: darkred;color: wheat; position: fixed; font-size: 200%; font-family: 'Comic Sans MS' ; left: 0; width: 100%;
+
+
+            /* Height of the footer*/
+            height: 50px;">
+    🥩 meatUP 🥩
+</header>
+<br>
+<br>
+<br>
+
 <div style="text-align: center">
-<div id="res"style="text-align: left;display: inline-block">  </div>
+<div id="res"style="text-align: left;display: inline-block;">  </div>
     <br>
 <input id="msg" type="text" name="msg" autofocus>
 <button id="myBtn" onclick="getData(document.getElementById('msg').value)">Send!</button>
-<div>Время до обновления:   <span id="timer">5</span></div>
-<a href="choose.php"><input type="submit" value="Назад"/></a>
+<div>Time to reload:   <span id="timer">5</span></div>
+<a href="choose.php"><input type="submit" value="Back"/></a>
+
 </div>
-</body>
-</html>

@@ -1,4 +1,4 @@
-
+<?php echo file_get_contents("html/header.html"); ?>
 
 <?php
 session_start();
@@ -22,4 +22,5 @@ if (isset($_SESSION['alerts']))   {echo '<div class="alert">' . $_SESSION['alert
         return result;
     }
 </script>
-<a href="index.php"><input type="submit" value="Назад"/></a>
+<a href="index.php"><input type="submit" value="Back"/></a>
+<?php echo file_get_contents("html/footer.html"); ?>

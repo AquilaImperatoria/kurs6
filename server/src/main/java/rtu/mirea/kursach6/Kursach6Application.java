@@ -9,8 +9,6 @@ import java.io.IOException;
 public class Kursach6Application {
 
     public static void main(String[] args) throws IOException {
-        DatabaseConfig dbconf = new DatabaseConfig();
-        dbconf.dataSource();
         SpringApplication.run(Kursach6Application.class, args);
 
     }

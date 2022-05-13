@@ -40,6 +40,10 @@ public class MessageController {
     public ResponseEntity<List<Message>> getMessagesByChatcode(@RequestParam String chatcode) {
         return new ResponseEntity<List<Message>>(messageRepository.getByChatcode(chatcode), HttpStatus.OK);
     }
+    @GetMapping("/messages/getuser")
+    public ResponseEntity<List<Message>> getMessagesByUsernam(@RequestParam String user) {
+        return new ResponseEntity<List<Message>>(messageRepository.getByUsernam(user), HttpStatus.OK);
+    }
     @GetMapping("/messages/delchatCODE")
     public ResponseEntity<List<Message>> deleteMessagesByChatCODE(@RequestParam String chatcode) {
         return new ResponseEntity<List<Message>>(messageRepository.deleteByChatcode(chatcode), HttpStatus.OK);

@@ -8,4 +8,5 @@ import java.util.List;
 public interface MessageRepository extends JpaRepository<Message, Integer> {
     List<Message> getByChatcode(String chatcode);
     List<Message> deleteByChatcode(String chatcode);
+    List<Message> getByUsernam(String user);
 }

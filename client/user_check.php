@@ -20,6 +20,7 @@ function httpPost($url, $data)
     return $response;
 }
 $message = "Ошибка при входе, возможно, вы ввели не тот пароль или еще не зарегистрировались?";
-if (($response == '[]')||(!isset($response))) {  $_SESSION['alerts'] = $message; header( "Location: http://localhost:81/index.php" );}
+if (($response == '[]')) {  $_SESSION['alerts'] = $message; header( "Location: http://localhost:81/index.php" );}
 else {$name = $_POST['name'];
-    $_SESSION['name'] = $name;header( "Location: https://kurs6-client.herokuapp.com/choose.php" );}
+    $_SESSION['name'] = $name;
+    header( "Location: https://kurs6-client.herokuapp.com/choose.php" );}

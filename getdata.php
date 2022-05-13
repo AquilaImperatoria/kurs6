@@ -7,7 +7,7 @@ $code = $_SESSION['chatcode'];
 $message = $_GET['message'];
 if( $message!="" ) {
     if ($message !== "`") {
-        $url = 'https://kurs6-client.herokuapp.com:55058/messages/new';
+        $url = 'https://kurs6-client.herokuapp.com/messages/new';
         $data = array(
             'usernam' => $name,
             'chatcode' => $code,

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$url = 'http://localhost:8080/users/check';
+$url = 'kurs6-server.herokuapp.com/users/check';
 $name = $_POST['name'];
 $password = $_POST['password'];
 $data = [
@@ -20,7 +20,7 @@ function httpPost($url, $data)
     return $response;
 }
 $message = "Ошибка при входе, возможно, вы ввели не тот пароль или еще не зарегистрировались?";
-if (($response == '[]')) {  $_SESSION['alerts'] = $message; header( "Location: http://localhost:81/index.php" );}
+if (($response == '[]')) {  $_SESSION['alerts'] = $message; header( "Location: http://localhost:80/index.php" );}
 else {$name = $_POST['name'];
     $_SESSION['name'] = $name;
-    header( "Location: https://kurs6-client.herokuapp.com/choose.php" );}
+    header( "Location: http://localhost:80/choose.php" );}

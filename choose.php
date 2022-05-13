@@ -1,8 +1,8 @@
 
-<a href="/newchat.php">
+<a href="/newchat.php" target="_blank">
      <input type="submit" value="Создать новый чат"/>
    </a>
-<form name='form' method='post' action="chat.php">
+<form name='form' method='post' action="chat.php" target="_blank">
 
     Подключиться к имеющемуся чату:<br> <input type="text" name="chatcode" id="chatcode" ><br/>
 

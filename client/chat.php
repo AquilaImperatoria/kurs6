@@ -35,13 +35,13 @@ error_reporting(E_ERROR | E_PARSE);
             if (scroll == true)
             setTimeout(function() {
                 window.scrollTo(0, document.body.scrollHeight);
-            }, 100);
+            }, 2000);
         }
         function star()
         {
 
             timer(0);
-            var delayInMilliseconds = 1100; //1 second
+            var delayInMilliseconds = 2100; //1 second
 
             setTimeout(function() {
                 window.scrollTo(0, document.body.scrollHeight);
@@ -59,7 +59,7 @@ error_reporting(E_ERROR | E_PARSE);
                     getData();
 
                 }
-            }, 1000);
+            }, 1800);
         }
 
 

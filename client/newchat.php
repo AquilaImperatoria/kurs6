@@ -2,7 +2,7 @@
 session_start();
 $name = $_SESSION['name'];
 var_dump($name);
-$url = 'http://localhost:8080/newchat';
+$url = 'kurs6-server.herokuapp.com/newchat';
 $data = [
     'usernam'      => $name
 ];
@@ -19,5 +19,5 @@ function httpPost($url, $data)
     return $response;
 }
 $_SESSION['chatcode'] = httpPost($url, $data);
-header( "Location: https://kurs6-client.herokuapp.com/chat.php" );
+header( "Location: /chat.php" );
 ?>

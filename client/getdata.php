@@ -7,7 +7,7 @@ $code = $_SESSION['chatcode'];
 $message = $_GET['message'];
 if( $message!="" ) {
     if ($message !== "`") {
-        $url = 'https://kurs6-client.herokuapp.com/messages/new';
+        $url = 'kurs6-server.herokuapp.com/messages/new';
         $data = array(
             'usernam' => $name,
             'chatcode' => $code,
@@ -32,7 +32,7 @@ if( $message!="" ) {
     function httpGet($url, $content)
     {
         $curl = curl_init($url);
-        $url = 'http://localhost:8080/messages/getchatcode?' . http_build_query($content);
+        $url = 'kurs6-server.herokuapp.com/messages/getchatcode?' . http_build_query($content);
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_HEADER, false);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

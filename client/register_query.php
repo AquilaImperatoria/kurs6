@@ -1,6 +1,6 @@
 <?php
 session_start();
-$url = 'http://localhost:8080//newuser';
+$url = 'kurs6-server.herokuapp.com/newuser';
 $name = $_POST['name'];
 $password = $_POST['password'];
 $data = array(
@@ -25,5 +25,5 @@ function httpPost($url, $content)
 }
 
 $message = "Ошибка при регистрации, попробуйте зарегистрироваться под другим именем";
-if ($status != 201) {  $_SESSION['alerts'] = $message; header( "Location: https://kurs6-client.herokuapp.com/register.php" );}
-    else header( "Location: https://kurs6-client.herokuapp.com/index.php" );
+if ($status != 201) {  $_SESSION['alerts'] = $message; header( "Location: /register.php" );}
+    else header( "Location: /index.php" );
